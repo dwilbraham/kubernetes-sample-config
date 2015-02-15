@@ -1,0 +1,21 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1beta1",
+  "id": "ssh",
+  "desiredState": {
+    "manifest": {
+      "version": "v1beta1",
+      "containers": [{
+        "name": "ubuntu-sshd",
+        "image": "rastasheep/ubuntu-sshd",
+        "ports": [{
+          "containerPort": 22,
+          "hostPort": 31001,
+        }]
+      }]
+    }
+  },
+  "labels": {
+    "name": "ssh"
+  }
+}

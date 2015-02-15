@@ -1,0 +1,16 @@
+{
+  "id": "sshd",
+  "cpus": 0.1,
+  "mem": 512.0,
+  "instances": 10,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "rastasheep/ubuntu-sshd",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 22, "hostPort": 0, "protocol": "tcp" }
+      ]
+    }
+  }
+}

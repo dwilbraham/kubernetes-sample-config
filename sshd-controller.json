@@ -1,0 +1,23 @@
+  {
+    "id": "sshController",
+    "kind": "ReplicationController",
+    "apiVersion": "v1beta1",
+    "desiredState": {
+      "replicas": 3,
+      "replicaSelector": {"name": "ssh"},
+      "podTemplate": {
+        "desiredState": {
+           "manifest": {
+             "version": "v1beta1",
+             "id": "ssh",
+             "containers": [{
+               "name": "ubuntu-sshd",
+               "image": "rastasheep/ubuntu-sshd",
+               "ports": [{"containerPort": 22, "hostPort": 31002}]
+             }]
+           }
+         },
+         "labels": {"name": "ssh"}
+        }},
+    "labels": {"name": "ssh"}
+  }
