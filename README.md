@@ -4,4 +4,6 @@ Log into them as root:root
 
 Quick launch:
 
- kubecfg -p 31001:22 run rastasheep/ubuntu-sshd 1 sshd-test-controller
+```shell
+kubecfg -p 31001:22 run rastasheep/ubuntu-sshd 1 sshd-test-controller
+```
