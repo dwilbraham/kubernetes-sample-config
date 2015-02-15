@@ -6,4 +6,6 @@ Quick launch:
 
 ```shell
 kubecfg -p 31001:22 run rastasheep/ubuntu-sshd 1 sshd-test-controller
+kubectl get pods | grep sshd-test-controller
+ssh root@${ip_of_host} -p 31001
 ```
