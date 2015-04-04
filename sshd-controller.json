@@ -1,5 +1,5 @@
   {
-    "id": "sshController",
+    "id": "sshcontroller",
     "kind": "ReplicationController",
     "apiVersion": "v1beta1",
     "desiredState": {
@@ -13,7 +13,7 @@
              "containers": [{
                "name": "ubuntu-sshd",
                "image": "rastasheep/ubuntu-sshd",
-               "ports": [{"containerPort": 22, "hostPort": 31002}]
+               "ports": [{"name": "ssh", "containerPort": 22}]
              }]
            }
          },

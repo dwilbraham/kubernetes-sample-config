@@ -2,6 +2,7 @@
   "id": "sshd",
   "kind": "Service",
   "apiVersion": "v1beta1",
+  "containerPort": "ssh",
   "port": 22,
   "selector": {
     "name": "ssh"
