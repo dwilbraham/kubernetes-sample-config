@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sshd
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: ssh
+    spec:
+      containers:
+      - name: ssh
+        image: rastasheep/ubuntu-sshd
+        ports:
+        - containerPort: 22

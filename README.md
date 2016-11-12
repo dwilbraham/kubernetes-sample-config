@@ -13,8 +13,8 @@ ssh root@${ip_of_host} -p 31001
 Cluster launch:
 
 ```shell
-kubectl create -f sshd-controller.json
-kubectl create -f sshd-service.json
+kubectl create -f sshd-controller.yaml
+kubectl expose deployment --type=NodePort sshd 
 kubectl get services | grep ssh
-ssh root@${service_ip}
+ssh root@${service_ip} -p{service_port
 ```
