@@ -18,3 +18,12 @@ kubectl expose deployment --type=NodePort sshd
 kubectl get services | grep ssh
 ssh root@${service_ip} -p{service_port
 ```
+
+Use kubectl from within minikube cluster:
+
+```shell
+mkdir ~/.kube
+cat config >~/.kube
+kubectl config set-credentials minikube --token=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
+kubectl cluster-info
+```
